@@ -1,4 +1,4 @@
-package org.praktikum.pageObjects;
+package org.praktikum.pageobjects;
 
 import io.qameta.allure.Step;
 import io.qameta.allure.Description;
@@ -7,10 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.praktikum.utils.BaseURL;
 
 public class ForgotPasswordPage {
     private WebDriver driver;
-    private String url = "https://stellarburgers.nomoreparties.site/forgot-password";
+    private String url = BaseURL.getBaseUrl()+ "/forgot-password";//"https://stellarburgers.nomoreparties.site/forgot-password";
 
     private By loginButton = By.xpath("//a[contains(@class, 'Auth_link__1fOlj') and text()='Войти']");
 

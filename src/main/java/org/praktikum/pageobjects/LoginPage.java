@@ -1,4 +1,4 @@
-package org.praktikum.pageObjects;
+package org.praktikum.pageobjects;
 
 import io.qameta.allure.Step;
 import io.qameta.allure.Description;
@@ -7,10 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.praktikum.utils.BaseURL;
 
 public class LoginPage {
     private WebDriver driver;
-    private String url = "https://stellarburgers.nomoreparties.site/login";
+    private String url = BaseURL.getBaseUrl() + "/login";
 
     private By emailField = By.xpath("//input[@name='name']");
     private By passwordField = By.xpath("//input[@name='Пароль']");
